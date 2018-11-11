@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+categorie = Categorie.create!(name: "Viande")
+categorie = Categorie.create!(name: "Legume")
+
+10.times do
+  article = Article.create!(name: Faker::StarWars.character, price: Faker::Number.between(1, 10), description: Faker::StarWars.quote, categorie_id: Faker::Number.between(1, 2))
+end
