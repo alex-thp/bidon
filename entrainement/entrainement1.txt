@@ -1,0 +1,72 @@
+
+Projet : S'entraîner sur les boucles
+
+1. Application
+
+Tu vas continuer de créer des petits programmes en ruby mais à la différence de ce que tu as fait pendant la semaine 0, tu es désormais obligé d'encapsuler ton code dans des méthodes.
+1.1 Dis bonjour
+
+Crée une methode say_hello qui va dire bonjour quand on l'execute.
+
+Pour t'aider ça devrait ressembler à quelques chose du genre
+
+def say_hello
+###mon code ici
+end
+
+1.2 Coucou toi
+
+Idem que le précédent sauf que ta méthode prend désormais en entrée une variable first_name et ton script affichera
+
+bonjour first_name
+
+1.3 Le combo
+
+Crée deux méthodes : ask_first_name et la methode say_hello(first_name) pour avoir un programme qui combine les deux pour demander le nom et lui dire bonjour
+2. Retour aux pyramides
+2.1 Pyramide de Mario
+
+Reprends ton deuxième exercice de la pyramide (tu sais, celle qu'il fallait rendre 😏) en l'encapsulant dans une methode pyramide
+2.2 Pyramide de Gizeh
+
+Next level, tu dois créer une méthode odd_pyramide qui va crée plusieurs étages de cette manière
+
+  Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
+> 5
+Voici la pyramide :
+    #
+   ###
+  #####
+ #######
+#########
+
+3. Mon petit mot de passe
+3.1 Création de mot de passe
+
+La première étape de cet exercice est de créer une méthode define_password qui va demander à l'utilisateur de créer son mot de passe et l'enregistrer dans une variable locale @user_password.
+
+Tu peux définir une méthode password_verification qui demande le mot de passe une deuxieme fois et qui vérifie que l'entrée de l'utilisateur est bien la même que @user_password.
+
+Point bonus si tu encapsules les deux méthodes dans une methode globale perform.
+3.2 Connexion à ton compte
+
+Maintenant tu vas coder une methode connect(password) qui va prendre ton mot de passe en entrée et qui te connectera uniquement si ton mot de passe correspond a celui que tu a crée précédemment
+
+Bien sûr, on travaille ici en console donc quand tu es connectée, il suffira d'afficher
+
+puts "You are online"
+
+Indice pour ceux qui sèche : la boucle while est ton amie
+
+Les pro s'amuseront à mixer toutes ces méthodes entre elles pour créer son mot de passe puis se connecter ensuite.
+4. Monter les escaliers
+
+Nous allons te demander de faire un super jeu qui déchire. Mario et sa pyramide n'a qu'à bien se tenir ! Nous allons imaginer un programme où une gentille personne va devoir monter des escaliers, en fonction d'un jet de dé. Une version informatique du jeu de l'oie en quelque sorte !
+
+Voici comment cela va se dérouler : au lancement du programme, le jeu va lancer une partie. Nous démarrons tout en bas d'un escalier à 10 marches, et chaque tour la personne va lancer un dé :
+
+    Si la personne fait 5 ou 6, elle avance d'une marche et le programme le dit (ainsi que la case où la personne se trouve)
+    Si la personne fait 1, elle descend d'une case et le programme le dit (ainsi que la case où la personne se trouve)
+    Si la personne fait 2, 3, ou 4 rien ne se passe, et le programme le dit
+
+Quand la personne atteint la 10ème marche, le programme dit que la personne a gagné, et le programme se termine.

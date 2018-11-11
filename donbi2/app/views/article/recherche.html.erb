@@ -1,0 +1,12 @@
+<p> recherche </p>
+<% i = @tab.length %>
+<% i.times do |l| %>
+<% a = Article.find(l + 1) %>
+<%= a.name %>
+<br/>
+<%= a.price %>
+<br/>
+<%= a.description %>
+<br/>
+<br/>
+<% end %>

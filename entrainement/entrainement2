@@ -1,0 +1,93 @@
+
+Projet : Hash Hash Hash
+
+1. Calculateur de calories
+
+Tu as en marre d'entendre ta belle-mère te parler de son dernier régime à la mode alors qu'elle s'enfile deux welshs chaque week-end? Alors ce petit script est fait pour toi.
+1.1 Les specs
+
+Le but est de créer un hash qui contiendra une base de donnée de repas, avec les apports nutritifs associés (glucides, lipides et protéines). Ton programme devra être capable de calculer le nombre de calories pour un (voir plus) repas. Voici comment on va procéder :
+
+Il va falloir créer un hash de données par repas sous ce modèle :
+
+WELSH = {
+"Lipides" => 38.4,
+"Glucides" => 18.3,
+"Protéines" => 36.3
+}
+
+Puis tu créeras une méthode weight_watchers qui calculera les calories d'un plat.
+
+Le hash suivant sera à utiliser pour ton calcul :
+
+CALORIES = {
+"Lipides" => 9,
+"Glucides" => 4,
+"Protéines" => 4
+}
+
+Et du coup weight_watcher(WELSH) devra te retourner 564 calories
+
+Mais comment je défini un Hash ?
+1. La mauvaise méthode : copier coller ce qui est écrit sur la ressource du jour
+2. La bonne méthode : definir le Hash (WELSH= Hash.new) puis le remplir avec les couples clé valeur (WELSH["Lipides"] = 38.4)
+2. Level up
+
+Ca y est ça marche pour un plat mais maintenant tu veux customiser ta méthode et faire en sorte que ça marche pour un menu
+
+Indice: on va utiliser un hash dans un hash #hashception
+
+MENU={
+ WELSH = {
+  "Lipides" => 38.4,
+  "Glucides" => 18.3,
+  "Protéines" => 36.3
+ },
+ FRITES = {
+  "Lipides" => 15,
+  "Glucides" => 41,
+  "Protéines" => 3.4
+ },
+ BIERE = {
+  "Lipides" => 0,
+  "Glucides" => 25,
+  "Protéines" => 4
+ }
+}
+
+Tu définira donc une autre méthode meal_weight_watchers(menu) en faisant une boucle sur le hash en entrée et en appelant ta méthode weight_watchers
+
+Mais comment je mets un hash dans un hash (aussi appelé le nesting ?
+1. Je crée un hash MENU
+2. Je lui donne la clé WELSH et lui renseigne le contenu associé (MENU["WELSH"]=WELSH)
+L'addition s'il vous plaît
+
+La junk food ca coûte cher ! Tu vas créer une méthode meal_price qui va calculer le coût total de ton menu.
+
+Ton hash de données ressemblera à ça :
+
+MENU={
+    WELSH = {
+        "Lipides" => 38.4,
+        "Glucides" => 18.3,
+        "Protéines" => 36.3
+     },
+   FRITES = {
+        "Lipides" => 15,
+        "Glucides" => 41,
+        "Protéines" => 3.4
+     },
+   BIERE = {
+        "Lipides" => 0,
+        "Glucides" => 25,
+        "Protéines" => 4
+     },
+   {PRIX=
+      {WELSH = { :prix => 15 },
+       FRITES = { :prix => 4 },
+       BIERE = { :prix  => 5 }
+      }
+   }
+}
+
+Et le résultat de meal_price(menu) sera 24 💶
