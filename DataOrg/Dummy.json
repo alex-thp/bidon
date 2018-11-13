@@ -1,0 +1,17 @@
+{
+    "Articles" : {
+        "nom":"nom",
+        "price":"price",
+        "store_id":"ref id",
+        "nature_id":"ref id"
+    },
+    "Nature" : {
+    "nature_id":"str id",
+    "nom":"nom"
+    },
+    "Enseignes" : {
+    "store":"nom",
+    "lieu":"gps",
+    "id":"ref id"
+    }
+}

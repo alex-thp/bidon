@@ -1,0 +1,15 @@
+{
+    "NomProduit" : [
+        {
+            "prix" : 7.28,
+            "quantité" : {
+                "n" : 103,
+                "unit" : "g"
+            },
+            "class" : "viande",
+            "type" : "porc",
+            "prep" : "cru",
+            "condi" : "cote"
+        }
+    ]
+}
