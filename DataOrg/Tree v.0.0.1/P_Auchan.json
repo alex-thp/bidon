@@ -1,0 +1,32 @@
+{
+    "Cote de Porc Auchan" : [
+        {
+            "url" : "url",
+            "img" : "imgsrc",            
+            "prix" : 7.28,
+            "quantité" : {
+                "n" : 103,
+                "unit" : "g"
+            },
+            "class" : "viande",
+            "type" : "porc",
+            "prep" : "cru",
+            "condi" : "cote"
+        }
+    ],
+    "Tomate d'Espagne" : [
+        {
+            "url" : "url",
+            "img" : "imgsrc", 
+            "prix" : 1.28,
+            "quantité" : {
+                "n" : 1,
+                "unit" : "kg"
+            },
+            "class" : "legum",
+            "type" : "tomate",
+            "prep" : "cru",
+            "condi" : "N/A"
+        }
+    ]
+}

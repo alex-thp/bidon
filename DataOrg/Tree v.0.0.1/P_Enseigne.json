@@ -1,6 +1,8 @@
 {
     "NomProduit" : [
         {
+            "url" : "url",
+            "img" : "imgsrc", 
             "prix" : 7.28,
             "quantité" : {
                 "n" : 103,
